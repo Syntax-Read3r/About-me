@@ -12,9 +12,9 @@ let userGuess =  function () {
     };
 
     if (capitalCity.toLowerCase() == 'yes') {
-        alert('Interesting')
-    } else {
         res += 1
+        alert('Interesting, you are right.')
+    } else {
         alert('You need Google in your life')
     }
 
@@ -26,9 +26,10 @@ while (toLowerCase(spainCity) !== 'yes' || toLowerCase(spainCity) !== 'no') {
 };
 
 if (spainCity.toLowerCase() == 'no') {
+    res += 1
+
     alert('Fascinating, you might actually be smart')
 } else {
-    res += 1
     alert('You need Google in your life')
 }
 
@@ -40,9 +41,10 @@ while (toLowerCase(stepsCity) !== 'yes' || toLowerCase(stepsCity) !== 'no') {
 };
 
 if (stepsCity.toLowerCase() == 'yes') {
+    res += 1
+
     alert('Well, this is truly a walk in the park for you.')
 } else {
-    res += 1
     alert('Breaking News!! We have a sunny day and a sprinkle of a wrong answer')
 }
 
@@ -54,23 +56,28 @@ while (toLowerCase(capitalCity) !== 'yes' || toLowerCase(capitalCity) !== 'no') 
 };
 
 if (capitalCity.toLowerCase() == 'no') {
-    alert('Those are truely good eyes, do you want to exchange')
-} else {
     res += 1
-    alert('The question was a trick one, The brand four bottle is in a tree.')
+
+    alert('Those are truely good eyes, do you want to exchange?')
+} else {
+    alert('This question was a trick one, The brand four bottle is in a tree.')
 
 //NOTE: five question
-let What = prompt('There was nine dwarfs and a princess in one fairy tale? Is this');
+let What = prompt('Is today Wednesday if yesterday was tomorrow, today would be Friday?');
 
 while (toLowerCase(capitalCity) !== 'yes' || toLowerCase(capitalCity) !== 'no') {
     rate = prompt('Please enter a value that\'s either a Yes or No.')
 };
 
 if (capitalCity.toLowerCase() == 'yes') {
-    alert('Interesting')
-} else {
     res += 1
-    alert('You need Google in your life')
+    alert('Bravo!!, Game completed')
+
+} else {
+    alert('Not this time champ, The answer is.. if x - 1 ==> x + 1 then x ==> x + 2, x + 2 = Friday, x = Wednesday')
 }
 }
+return res
  }
+
+ userGuess();
