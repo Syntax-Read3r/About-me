@@ -85,15 +85,15 @@ let userGuess = function () {
 	}
 
 	//NOTE: five question
-	let what = prompt(
+	let whatTwo = prompt(
 		`I grew up with a friend who had the same as me, and we were best friends, Then I met ${getName} who happened to have the same name as you. Was my childhood bestfriends' name Munyaradzi? `
 	);
 
-	while (what.toLowerCase() !== "yes" || what.toLowerCase() !== "no") {
-		what = prompt("Please enter a value that's either a Yes or No.");
+	while (whatTwo.toLowerCase() !== "yes" && whatTwo.toLowerCase() !== "no") {
+		whatTwo = prompt("Please enter a value that's either a Yes or No.");
 	}
 
-	if (what.toLowerCase() == "yes") {
+	if (whatTwo.toLowerCase() == "yes") {
 		res += 1;
 		alert("Well my attempt to confuse you did not work. Great work");
 	} else {
@@ -111,7 +111,8 @@ let userGuess = function () {
 	let ansr = prompt('What year did I break my leg?');
 	let chcker = false;
 
-	for(let x = 4; x > 4; x--) {
+	for(let x = 3; x > 0; x--) {
+
 		if(ansr != ress) {
 			alert('Wrong answer, You have ' + x +  ' attempts left')
 			if (ansr < 2007) {
@@ -119,11 +120,12 @@ let userGuess = function () {
 			} else {
 				alert('Go lower!')
 			}
-
+           ansr = prompt('What year did I break my leg?')
 		} else {
 			res += 1
 			chcker = true;
 			alert('Great job')
+			break;
 		}
 	}			
 
@@ -135,9 +137,9 @@ let userGuess = function () {
 
 	alert('This is the final question. This question will have multiple correct answers.')
 
-	let 
+	// let 
 
-	return res;
+	// return res;
 };
 
 userGuess();
