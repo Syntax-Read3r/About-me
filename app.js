@@ -1,66 +1,80 @@
 "use strict";
 
-let userGuess = function () {
+//This function will ask the player for their name. 
+let getUsername = function () {
 	let res = 0;
 
 	alert("Let's play a game. NOTE: Yes or No answers only");
+
 	let getName = prompt(
 		"First, let's get know each other. I am Munyaradzi. What is your name?"
 	);
+	return getName 
+}
 
-	let capitalCity = prompt(
+	//Question One
+	function questionOne() {
+
+	let answerOne = prompt(
 		`[Let's Begin] Is it true that I lived in Birmingham once upon a time?`
 	);
 
 	while (
-		capitalCity.toLowerCase() !== "yes" &&
-		capitalCity.toLowerCase() !== "no"
+		answerOne.toLowerCase() !== "yes" &&
+		answerOne.toLowerCase() !== "no"
 	) {
-		capitalCity = prompt("Please enter a value that's either a Yes or No.");
+		answerOne = prompt("Please enter a value that's either a Yes or No.");
 	}
 
-	if (capitalCity.toLowerCase() == "no") {
+	if (answerOne.toLowerCase() == "no") {
 		res += 1;
 		alert("Interesting, you are right.");
 	} else {
 		alert("Tough, you are wrong.");
 	}
+}
 
-	// NOTE: second question
-	let spainCity = prompt(
+	//Question Two
+	function questionTwo() {
+
+	let answerTwo = prompt(
 		"Is it true that I have 4 toes. It is said that I lost one when a I was a child"
 	);
 
 	while (
-		spainCity.toLowerCase() !== "yes" &&
-		spainCity.toLowerCase() !== "no"
+		answerTwo.toLowerCase() !== "yes" &&
+		answerTwo.toLowerCase() !== "no"
 	) {
-		spainCity = prompt("Please enter a value that's either a Yes or No.");
+		answerTwo = prompt("Please enter a value that's either a Yes or No.");
 	}
 
-	if (spainCity.toLowerCase() == "no") {
+	if (answerTwo.toLowerCase() == "no") {
 		res += 1;
 
-		alert(`Go ${getName}!!, Go ${getName}!! That is correct`);
+		alert(`Go ${getUsername()}!!, Go ${getUsername()}!! That is correct`);
 	} else {
 		alert(
 			"Actually I have six minus 3 divided by the square root of !!Stop reading you are wrong!! "
 		);
 	}
+}
 
-	// NOTE: third question
-	let stepsCity = prompt(
+	//Quesiton Three 
+
+	function questionThree() {
+	let answerThree = prompt(
 		`Is it true that I moved to England from South Africa`
 	);
 
 	while (
-		stepsCity.toLowerCase() !== "yes" &&
-		stepsCity.toLowerCase() !== "no"
+		answerThree.toLowerCase() !== "yes" &&
+		answerThree.toLowerCase() !== "no"
 	) {
-		stepsCity = prompt("Please enter a value that's either a Yes or No.");
+		answerThree = prompt("Please enter a value that's either a Yes or No.");
 	}
 
-	if (stepsCity.toLowerCase() == "no") {
+
+	if (answerThree.toLowerCase() == "no") {
 		res += 1;
 
 		alert("Well well well, this is truly a walk in the park for you.");
@@ -69,31 +83,38 @@ let userGuess = function () {
 			"Breaking News!! We have a sunny day and a sprinkle of a wrong answer"
 		);
 	}
+}
 
-	// NOTE: four question
-	let pillar = prompt("Was Munyaradzi as a child a basketball lover?");
+	//Question Four
 
-	while (pillar.toLowerCase() !== "yes" && pillar.toLowerCase() !== "no") {
-		pillar = prompt("Please enter a value that's either a Yes or No.");
+	function questionFour() {
+
+	let answerFour = prompt("Was Munyaradzi as a child a basketball lover?");
+
+	while (answerFour.toLowerCase() !== "yes" && answerFour.toLowerCase() !== "no") {
+		answerFour = prompt("Please enter a value that's either a Yes or No.");
 	}
 
-	if (pillar.toLowerCase() == "yes") {
+	if (answerFour.toLowerCase() == "yes") {
 		res += 1;
 		alert("Correct, I will make the next one tougher?");
 	} else {
 		alert("Not this time champ.");
 	}
+}
 
-	//NOTE: five question
-	let whatTwo = prompt(
+	//Question Five
+	function questionFive() {
+
+	let answerFive = prompt(
 		`I grew up with a friend who had the same as me, and we were best friends, Then I met ${getName} who happened to have the same name as you. Was my childhood bestfriends' name Munyaradzi? `
 	);
 
-	while (whatTwo.toLowerCase() !== "yes" && whatTwo.toLowerCase() !== "no") {
-		whatTwo = prompt("Please enter a value that's either a Yes or No.");
+	while (answerFive.toLowerCase() !== "yes" && answerFive.toLowerCase() !== "no") {
+		answerFive = prompt("Please enter a value that's either a Yes or No.");
 	}
 
-	if (whatTwo.toLowerCase() == "yes") {
+	if (answerFive.toLowerCase() == "yes") {
 		res += 1;
 		alert("Well my attempt to confuse you did not work. Great work");
 	} else {
@@ -104,34 +125,38 @@ let userGuess = function () {
 
 	alert(`Well done, so far you have gotten ${res} out of 5. Let's change the pace a little bit.`)
 
-	//NOTE: six question
-	//
 
-	let ress = 2008;
-	let ansr = prompt('What year did I break my leg?');
-	let chcker = false;
+	//Question Six
+	function questionSix() {
+		let chcker = false;
+	let correctAnswer = 2008;
+	let answerSix = prompt('What year did I break my leg?');
 
 	for(let x = 3; x > 0; x--) {
 
-		if(ansr != ress) {
+		if(answerSix != correctAnswer) {
 			alert('Wrong answer, You have ' + x +  ' attempts left')
-			if (ansr < 2007) {
-				alert('Go highier!')
+			if (answerSix < 2007) {
+				alert('Go higher!')
 			} else {
 				alert('Go lower!')
 			}
-           ansr = prompt('What year did I break my leg?')
+           answerSix = prompt('What year did I break my leg?')
 		} else {
 			res += 1
 			chcker = true;
 			alert('Great job')
 			break;
 		}
-	}			
-
+	}
 	if (!chcker) {
 		alert('The year I broke my leg was 2008. This happened while I was playing basketball in High School.')
 	}
+	
+}			
+
+	
+
 
 	//NOTE: Question Seven
 
@@ -142,4 +167,3 @@ let userGuess = function () {
 	// return res;
 };
 
-userGuess();
