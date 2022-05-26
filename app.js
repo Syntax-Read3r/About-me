@@ -9,7 +9,7 @@ let userGuess = function () {
 	);
 
 	let capitalCity = prompt(
-		`Is it true that I lived in Birmingham once upon a time?`
+		`[Let's Begin] Is it true that I lived in Birmingham once upon a time?`
 	);
 
 	while (
@@ -121,13 +121,21 @@ let userGuess = function () {
 			}
 
 		} else {
+			res += 1
+			chcker = true;
 			alert('Great job')
 		}
 	}			
 
 	if (!chcker) {
-		alert('The year I broke my leg was 2008. This happed while I was playing basketball in High School.')
+		alert('The year I broke my leg was 2008. This happened while I was playing basketball in High School.')
 	}
+
+	//NOTE: Question Seven
+
+	alert('This is the final question. This question will have multiple correct answers.')
+
+	let 
 
 	return res;
 };
