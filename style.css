@@ -1,10 +1,22 @@
+body {
+	width: 90%;
+	margin: 0 auto;
+}
 header {
-    background-color: blueviolet;
-    font-size: 50px;
-    text-align: center;
-    font-family: 'Macondo', cursive;
-    margin: 5px auto;
-    border-radius: 5px;
+	background-color: blueviolet;
+	font-size: 50px;
+	text-align: center;
+	font-family: "Macondo", cursive;
+	margin: 5px auto;
+	border-radius: 5px;
 }
 
+main {
 
+}
+
+section {
+}
+
+footer {
+}
