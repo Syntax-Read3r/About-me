@@ -2,21 +2,49 @@ body {
 	width: 90%;
 	margin: 0 auto;
 }
-header {
-	background-color: blueviolet;
-	font-size: 50px;
-	text-align: center;
-	font-family: "Macondo", cursive;
-	margin: 5px auto;
+img {
+	width: 10%;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: aqua;
 	border-radius: 5px;
 }
 
-main {
-
+.nav_logo {
+	color: rgb(21, 79, 129);
 }
 
-section {
+.nav_list {
+	list-style: none;
+	display: flex;
+	column-gap: 20px;
 }
 
-footer {
+.nav_link {
+	display: inline-block;
+	text-decoration: none;
+	color: rgb(31, 105, 170);
+	position: relative;
+}
+
+.nav_link::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: rgb(14, 95, 165);
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .5s;
+}
+
+.nav_link:hover::after{
+	transform: scaleX(1);
+	transform-origin: left;
 }
