@@ -1,6 +1,7 @@
-let res = 0;
 
 "use strict";
+
+let res = 0;
 
 //NOTE: This function will ask the player for their name.
 let getUsername = function () {
